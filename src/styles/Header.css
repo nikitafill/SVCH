@@ -1,0 +1,27 @@
+header {
+    height: 60px;
+    background-color: rgba(90, 178, 255, 0.723);
+    color: rgba(0, 0, 0, 0.897);
+    padding: 15px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: rgba(0, 0, 0, 0.897);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
