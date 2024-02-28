@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Александр Александров",
+      "position": "Software Engineer",
+      "department": "Engineering",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "image": "https://img.freepik.com/free-photo/close-up-of-bearded-tired-man_176420-18785.jpg?size=626&ext=jpg",
+      "email": "john.doe@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Александра Александрова",
+      "position": "Product Manager",
+      "department": "Product",
+      "bio": "Praesent vitae sapien at odio tincidunt vehicula...",
+      "image": "https://img.freepik.com/free-photo/beautiful-blonde-woman-having-mysterious-and-glad-expression-face-expressions-and-emotions_176420-15146.jpg?size=626&ext=jpg",
+      "email": "jane.smith@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Петр Петров",
+      "position": "Data Scientist",
+      "department": "Data Science",
+      "bio": "Fusce auctor elit vel enim viverra, id mollis nunc...",
+      "image": "https://img.freepik.com/free-photo/portrait-of-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.1141335507.1707955200&semt=ais",
+      "email": "alex.johnson@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Ольга Петрова",
+      "position": "Marketing Manager",
+      "department": "Marketing",
+      "bio": "Integer vitae nulla eget justo finibus bibendum...",
+      "image": "https://img.freepik.com/free-photo/portrait-of-young-pretty-positive-girl-smiling_176420-9609.jpg?size=626&ext=jpg",
+      "email": "emily.brown@example.com"
+    }
+  ]
