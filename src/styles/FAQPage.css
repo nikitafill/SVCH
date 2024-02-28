@@ -1,0 +1,35 @@
+/* FAQPage.css */
+
+.container-faq {
+  margin: 2rem 10rem;
+}
+
+.faqh1 {
+  color: rgb(60, 48, 48);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.accordion-button {
+  background-color: rgba(202, 230, 255, 0.723);
+  color: #333;
+  border-radius: 20px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.accordion-button:hover {
+  background-color: rgba(241, 248, 255, 0.723);
+}
+
+.accordion-body {
+  background-color: rgba(202, 230, 255, 0.723);
+  border-radius: 60px;
+  padding: 1rem 3rem;
+  color: rgb(60, 48, 48);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
