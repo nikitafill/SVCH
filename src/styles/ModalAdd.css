@@ -1,0 +1,50 @@
+.modal-add {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .modal-add input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-button {
+    padding: 8px 15px;
+    margin-left: 250px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #8f9f92;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+
+  .cancel-button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #9f8f8f;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .cancel-button:hover {
+    background-color: #a04545;
+  }
