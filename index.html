@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Учет качества продукции</title>
+</head>
+
+<body>
+  <h1>Учет качества продукции</h1>
+  <button onclick="fetchProductData()">Получить данные(GET)</button>
+  <button onclick="fetchProductDataPost()">Получить данные(POST)</button>
+  <button onclick="addProduct()">Добавить продукт(POST)</button>
+  <button onclick="downloadData('json')">Скачать JSON файл</button>
+  <button onclick="downloadData('xml')">Скачать XML файл</button>
+  <button onclick="downloadData('html')">Скачать HTML файл</button>
+  <ul id="productList"></ul>
+
+  <script>
+    async function fetchProductData() {
+      const response = await fetch("http://localhost:3000/api/products");
+      const data = await response.json();
+
+      const productList = document.getElementById("productList");
+      productList.innerHTML = "";
+
+      data.forEach((product) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${product.name}, ${product.type}, ${product.weight} кг, ${product.price} р - ${product.quality} качество`;
+        productList.appendChild(listItem);
+      });
+    }
+
+    async function fetchProductDataPost() {
+      const response = await fetch("http://localhost:3000/api/products", {
+        method: "POST",
+      });
+      const data = await response.json();
+
+      const productList = document.getElementById("productList");
+      productList.innerHTML = "";
+
+      data.forEach((product) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${product.name}, ${product.type}, ${product.weight} кг, ${product.price} р - ${product.quality} качество`;
+        productList.appendChild(listItem);
+      });
+    }
+
+    async function addProduct() {
+      const response = await fetch("/api/products/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: 4,
+          name: "Новый продукт",
+          type: "Новый",
+          quality: "Высокое",
+          price: 99,
+        }),
+      });
+
+      const result = await response.json();
+      console.log(result);
+
+      fetchProductData();
+    }
+
+    async function downloadData(format) {
+      const response = await fetch(
+        `http://localhost:3000/api/formattedData`,
+        {
+          headers: {
+            Accept: `application/${format}`,
+          },
+        }
+      );
+
+      if (format === "json" || format === "xml" || format === "html") {
+        const data = await response.text();
+        downloadFile(data, format);
+      } else {
+        console.error("Invalid format for download.");
+      }
+    }
+
+    function downloadFile(data, format) {
+      const blob = new Blob([data], { type: `application/${format}` });
+      const link = document.createElement("a");
+
+      link.href = window.URL.createObjectURL(blob);
+      link.download = `product.${format}`;
+      link.click();
+    }
+  </script>
+</body>
+
+</html>
